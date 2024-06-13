@@ -1,6 +1,6 @@
 # Load Testing the cborg Chatbot Portal
 
-This repository contains scripts to load test the cborg chatbot portal by submitting queries to the "lbl/llama-3" model simultaneously every 10 minutes. The testing setup uses a Python script to send parallel requests and a Bash script to manage the job submission to a cluster.
+This repository contains scripts to load test the cborg chatbot portal by submitting queries to the `lbl/command-r-plus` model simultaneously every 10 minutes. The testing setup uses a Python script to send parallel requests and a Bash script to manage the job submission to a cluster.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ sbatch run_parallel_chatbot.sh
 ```
 
 This command will:
-- Submit 200 queries to the "lbl/llama-3" model simultaneously.
+- Submit 200 queries to the "lbl/command-r-plus" model simultaneously.
 - Run the script 100 times with a 10-minute interval between each run.
 
 ### 4. Monitoring Job Output
@@ -64,7 +64,7 @@ The output and error logs will be stored in the `./output` directory with filena
 
 ### `parallel_chatbot_queries.py`
 
-This Python script initializes the OpenAI client using the API key from the environment variable and sends a list of predefined questions to the "lbl/llama-3" model. The responses are printed to the console.
+This Python script initializes the OpenAI client using the API key from the environment variable and sends a list of predefined questions to the `lbl/command-r-plus` model. The responses are printed to the console.
 
 ### `run_parallel_chatbot.sh`
 

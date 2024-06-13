@@ -35,7 +35,7 @@ questions = [
 # send a question to the chatbot and get the response
 def get_response(question):
     response = client.chat.completions.create(
-        model="lbl/llama-3",
+        model="lbl/command-r-plus",
         messages=[
             {
                 "role": "user",
